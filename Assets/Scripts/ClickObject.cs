@@ -1,10 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickObject : MonoBehaviour {
     
-    private void Update()
+	public ShopObject shopObject;
+	public Text Name;
+	public Text Balance;
+	public Text Points;
+	public Text Description;
+	public int cost;
+	public int fPoints;
+	public ShopObject currParentSO;
+
+    public void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -15,14 +25,21 @@ public class ClickObject : MonoBehaviour {
             {
                 if (hit.transform)
                 {
-                    PrintName(hit.transform.gameObject);
+					DisplayInfo(hit.transform.gameObject);
                 }
             }
         }
     }
 
-    private void PrintName(GameObject go)
+    public void DisplayInfo(GameObject go)
     {
-        print(go.name);
+		currParentSO  = GameObject.Find (go.transform.parent.name).GetComponent<ShopObject>();
+
+		Name.text = "Name: " + currParentSO.itemName;
+		Balance.text = "Cost: " + currParentSO.itemBalance;
+		cost = currParentSO.itemBalance;
+		Points.text = "Food Points: " + currParentSO.foodPoints;
+		fPoints = currParentSO.foodPoints;
+		Description.text = "Description: " + currParentSO.description;
     }
 }
