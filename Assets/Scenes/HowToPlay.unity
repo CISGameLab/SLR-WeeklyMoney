@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,6 +113,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &24867438 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+  m_PrefabInternal: {fileID: 616172562}
 --- !u!1 &132862293
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +175,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -198,6 +202,7 @@ GameObject:
   - component: {fileID: 272608175}
   - component: {fileID: 272608174}
   - component: {fileID: 272608173}
+  - component: {fileID: 272608176}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -221,8 +226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -220}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -299.1, y: -323.4}
+  m_SizeDelta: {x: 277.1, y: 101.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272608173
 MonoBehaviour:
@@ -298,6 +303,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272608171}
+--- !u!114 &272608176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272608171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617b073b0e0520849be995c0f56d243c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453392802
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +429,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 19.617855
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -437,13 +453,64 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497154100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -0.102, y: 0.637, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 653010072}
+  - {fileID: 24867438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &616172562
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 497154104}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.069
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.9434776
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.397819
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3e8a43558db0cac478d4d6d833479cbe, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &653010071
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,8 +700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -242.5, y: -140.8}
-  m_SizeDelta: {x: 395, y: 206.6}
+  m_AnchoredPosition: {x: -8.9, y: 78.2}
+  m_SizeDelta: {x: 1333.7, y: 537.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080270691
 MonoBehaviour:
@@ -648,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -659,7 +726,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -668,12 +735,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You are to learn how to survive on the money on your bridge card. \nClick
-    on an item to see it's price, and then \"Buy\" it, or \"Pass\" to continue looking.
-    The food you buy gives you food points equal to its cost. \nToiletries must be
-    bought once a month. \nTo advance a week, you click on the gas pump to buy gas,
-    which changes between $22 and $33. This will consume your food points. (1 meal
-    = 2 food points. Going ahead a week will deduct 20 food points)."
+  m_Text: "You are to learn how to survive on the money on your Bridge Card. \n\nClicking
+    an item will allow you to learn more information.\n\nToiletries must be bought
+    once a month. \n\nTo advance a week, you click on the gas pump to buy gas, which
+    changes between $22 and $33. This will consume 15 food points. \n\nAfter four
+    weeks, your card balance is reimbursed by up to 200 dollars.\nIf you rack up debt
+    of $-200 or more, you lose."
 --- !u!222 &2080270692
 CanvasRenderer:
   m_ObjectHideFlags: 0

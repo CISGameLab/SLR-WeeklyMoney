@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class Purchase : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class Purchase : MonoBehaviour {
 	public ClickObject cObject;
 	public FoodPoints fPoints;
 	public MoveAhead moveAhead;
+	public new AudioSource audio;
 
 	void Start () 
 	{
@@ -19,5 +21,10 @@ public class Purchase : MonoBehaviour {
 	{
 		balance.SetBalance (cObject.cost);
 		fPoints.SetFoodPoints (cObject.fPoints);
+		audio.Play ();
+		if (balance.currBalance < -50) 
+		{
+			SceneManager.LoadScene ("EndGame");
+		}
 	}
 }
